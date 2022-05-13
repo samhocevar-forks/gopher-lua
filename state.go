@@ -567,7 +567,7 @@ func (rg *registry) SetNumber(reg int, val LNumber) {
 			rg.resize(requiredSize)
 		}
 	}
-	rg.array[reg] = rg.alloc.LNumber2I(val)
+	rg.array[reg] = val
 	if reg >= rg.top {
 		rg.top = reg + 1
 	}

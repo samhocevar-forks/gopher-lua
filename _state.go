@@ -521,7 +521,7 @@ func (rg *registry) Set(reg int, val LValue) {
 func (rg *registry) SetNumber(reg int, val LNumber) {
 	newSize := reg + 1
 	// +inline-call rg.checkSize newSize
-	rg.array[reg] = rg.alloc.LNumber2I(val)
+	rg.array[reg] = val
 	if reg >= rg.top {
 		rg.top = reg + 1
 	}
